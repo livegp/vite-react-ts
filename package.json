@@ -1,0 +1,56 @@
+{
+  "name": "vite-react-ts",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "homepage": "https://livegp.github.io/vite-react-ts",
+  "description": "",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/livegp/vite-react-ts/issues"
+  },
+  "author": {
+    "name": "Oleksandr Pishta",
+    "email": "live.gp@gmail.com",
+    "url": "https://github.com/livegp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livegp/vite-react-ts"
+  },
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun tsc -b && vite build",
+    "preview": "bunx --bun vite preview",
+    "format": "biome format --write --unsafe",
+    "lint": "biome lint --write --unsafe",
+    "check": "biome check --write --unsafe"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@swc/plugin-emotion": "^4.0.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.1",
+    "lefthook": "^1.8.1",
+    "typescript": "^5.6.3",
+    "unplugin-turbo-console": "^1.10.4",
+    "vite": "^5.4.10",
+    "vite-imagetools": "^7.0.4",
+    "vite-plugin-biome": "^1.0.12",
+    "vite-plugin-favicons": "^0.1.5",
+    "vite-plugin-favicons-inject": "^2.2.0",
+    "vite-plugin-minify": "^2.0.0",
+    "vite-plugin-open-graph": "^2.0.6",
+    "vite-plugin-react-click-to-component": "^3.0.0",
+    "vite-plugin-svg-spritemap": "^1.0.1",
+    "vite-plugin-webfont-dl": "^3.9.5"
+  }
+}

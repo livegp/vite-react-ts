@@ -75,8 +75,8 @@ export default defineConfig(({ mode }) => {
         emit: false,
       }),
       faviconsPlugin({
-        imgSrc: '/src/assets/favicons/logo.svg',
-        path: '/favicons',
+        imgSrc: './src/assets/favicons/logo.svg',
+        path: '/',
         appName: 'vite-react-ts',
         appShortName: 'vite-react-ts',
         appDescription: 'the starting template of the project',
@@ -109,7 +109,7 @@ export default defineConfig(({ mode }) => {
         manifestMaskable: true,
         manifestFileName: 'manifest.json',
         failGraciously: false,
-      } as Options ),
+      } as Options),
       // vitePluginFaviconsInject('./src/assets/favicons/logo.svg', {
       //   path: '/',
       //   appName: 'vite-react-ts',

@@ -1,4 +1,4 @@
-import { Logo } from './Icon.styled';
+import { Logo } from './Icon.styled.ts';
 
 export const Icon = ({ name, animated = false }) => (
   <Logo

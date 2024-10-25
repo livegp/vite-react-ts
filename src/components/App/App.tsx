@@ -1,12 +1,8 @@
 import { Global } from '@emotion/react';
 import { useState } from 'react';
-import {
-  img,
-  sources,
-} from '/src/assets/img/vite.png?as=picture&w=100;300;500';
-import { Head } from '../Head.jsx';
-import { Icon } from '../Icon/Icon.jsx';
-import { Image } from '../Image.jsx';
+import { Head } from '../Head.js';
+import { Icon } from '../Icon/Icon.tsx';
+// import { Image } from '../Image.tsx';
 import {
   Button,
   Card,
@@ -14,7 +10,11 @@ import {
   StyledLink,
   Text,
   Title,
-} from './App.styled';
+} from './App.styled.ts';
+// import {
+//   img,
+//   sources,
+// } from './src/assets/img/vite.png?as=picture&w=100;300;500';
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -45,7 +45,7 @@ export function App() {
         </p>
       </Card>
       <Text>Click on the Vite and React logos to learn more</Text>
-      <Image img={img} sources={sources} />
+      {/* <Image img={img} sources={sources} /> */}
     </>
   );
 }

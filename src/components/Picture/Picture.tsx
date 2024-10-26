@@ -11,10 +11,7 @@ interface PictureType {
   };
 }
 
-export const PictureStyled = ({
-  img,
-  sources,
-}: PictureType): React.JSX.Element => (
+export const Picture = ({ img, sources }: PictureType): React.JSX.Element => (
   <picture>
     {Object.entries(sources).map(([format, srcSet]) => (
       <source key={format} srcSet={srcSet} type={`image/${format}`} />

@@ -1,15 +1,17 @@
 import type React from 'react';
 import { IconStyled } from './Icon.styled.ts';
 
+interface IconPropsType {
+  name: string;
+  animated?: boolean;
+  primary?: boolean;
+}
+
 export const Icon = ({
   name,
   animated,
   primary,
-}: {
-  name: string;
-  animated?: boolean;
-  primary?: boolean;
-}): React.JSX.Element => (
+}: IconPropsType): React.JSX.Element => (
   <IconStyled
     animated={animated}
     primary={primary}

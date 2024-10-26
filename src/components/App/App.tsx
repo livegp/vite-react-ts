@@ -1,9 +1,13 @@
 import { Global } from '@emotion/react';
 import type React from 'react';
 import { useState } from 'react';
+import {
+  img,
+  sources,
+} from '/src/assets/img/vite.png?w=100;300;500&as=picture';
 import { Head } from '../Head/Head.js';
 import { Icon } from '../Icon/Icon.tsx';
-import { PictureStyled } from '../Picture/Picture.tsx';
+import { Picture } from '../Picture/Picture.tsx';
 import {
   ButtonStyled,
   CardStyled,
@@ -12,10 +16,6 @@ import {
   TextStyled,
   TitleStyled,
 } from './App.styled.ts';
-import {
-  img,
-  sources,
-} from './src/assets/img/vite.png?as=picture&w=100;300;500';
 
 export function App(): React.JSX.Element {
   const [count, setCount] = useState(0);
@@ -46,7 +46,7 @@ export function App(): React.JSX.Element {
         </p>
       </CardStyled>
       <TextStyled>Click on the Vite and React logos to learn more</TextStyled>
-      <PictureStyled img={img} sources={sources} />
+      <Picture img={img} sources={sources} />
     </>
   );
 }

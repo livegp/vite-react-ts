@@ -3,7 +3,7 @@ import type React from 'react';
 import { useState } from 'react';
 import { Head } from '../Head/Head.js';
 import { Icon } from '../Icon/Icon.tsx';
-import { PictureStyled } from '../Picture/Picture.tsx';
+// import { PictureStyled } from '../Picture/Picture.tsx';
 import {
   Button,
   Card,
@@ -12,10 +12,10 @@ import {
   Text,
   Title,
 } from './App.styled.ts';
-import {
-  img,
-  sources,
-} from './src/assets/img/vite.png?as=picture&w=100;300;500';
+// import {
+//   img,
+//   sources,
+// } from './src/assets/img/vite.png?as=picture&w=100;300;500';
 
 export function App(): React.JSX.Element {
   const [count, setCount] = useState(0);
@@ -46,7 +46,7 @@ export function App(): React.JSX.Element {
         </p>
       </Card>
       <Text>Click on the Vite and React logos to learn more</Text>
-      <PictureStyled img={img} sources={sources} />
+      {/* <PictureStyled img={img} sources={sources} /> */}
     </>
   );
 }

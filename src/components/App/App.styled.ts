@@ -1,16 +1,16 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const StyledLink = styled.a`
+export const LinkStyled = styled.a`
 
 `;
 
-export const Title = styled.h1`
+export const TitleStyled = styled.h1`
   font-size: 3.2em;
   line-height: 1.1;
 `;
 
-export const Button = styled.button`
+export const ButtonStyled = styled.button`
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -33,11 +33,11 @@ export const Button = styled.button`
 }
 `;
 
-export const Card = styled.div`
+export const CardStyled = styled.div`
   padding: 2em;
 `;
 
-export const Text = styled.p`
+export const TextStyled = styled.p`
   color: #888;
 `;
 

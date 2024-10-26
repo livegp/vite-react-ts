@@ -1,8 +1,9 @@
 import { Global } from '@emotion/react';
+import type React from 'react';
 import { useState } from 'react';
-import { Head } from '../Head.js';
+import { Head } from '../Head/Head.js';
 import { Icon } from '../Icon/Icon.tsx';
-// import { Image } from '../Image.tsx';
+import { PictureStyled } from '../Picture/Picture.tsx';
 import {
   Button,
   Card,
@@ -11,15 +12,15 @@ import {
   Text,
   Title,
 } from './App.styled.ts';
-// import {
-//   img,
-//   sources,
-// } from './src/assets/img/vite.png?as=picture&w=100;300;500';
+import {
+  img,
+  sources,
+} from './src/assets/img/vite.png?as=picture&w=100;300;500';
 
-export function App() {
+export function App(): React.JSX.Element {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     setCount(count => count + 1);
   };
 
@@ -29,7 +30,7 @@ export function App() {
       <Head />
       <div>
         <StyledLink href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-          <Icon name='vite' />
+          <Icon name='vite' primary={true} />
         </StyledLink>
         <StyledLink href='https://react.dev' target='_blank' rel='noreferrer'>
           <Icon name='react' animated={true} />
@@ -45,7 +46,7 @@ export function App() {
         </p>
       </Card>
       <Text>Click on the Vite and React logos to learn more</Text>
-      {/* <Image img={img} sources={sources} /> */}
+      <PictureStyled img={img} sources={sources} />
     </>
   );
 }

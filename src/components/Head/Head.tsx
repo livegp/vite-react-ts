@@ -1,6 +1,7 @@
+import type React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export function Head() {
+export function Head(): React.JSX.Element {
   return (
     <Helmet>
       <html lang='en' />

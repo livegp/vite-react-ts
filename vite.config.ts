@@ -1,9 +1,9 @@
-// import { faviconsPlugin } from '@darkobits/vite-plugin-favicons';
 import react from '@vitejs/plugin-react-swc';
 import TurboConsole from 'unplugin-turbo-console/vite';
 import { defineConfig, loadEnv } from 'vite';
 import { imagetools } from 'vite-imagetools';
 import biomePlugin from 'vite-plugin-biome';
+import hashedFaviconsPlugin from 'vite-plugin-hashed-favicons';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import ogPlugin from 'vite-plugin-open-graph';
 import { reactClickToComponent } from 'vite-plugin-react-click-to-component';
@@ -90,21 +90,43 @@ export default defineConfig(({ mode }) => {
         svgo: true,
         emit: false,
       }),
-      // faviconsPlugin({
-      //   inject: true,
-      //   cache: true,
-      //   icons: {
-      //     favicons: {
-      //       source: './src/assets/favicons/logo.svg',
-      //     },
-      //     android: {
-      //       source: './src/assets/favicons/logo.svg',
-      //     },
-      //     appleStartup: {
-      //       source: './src/assets/favicons/logo.svg',
-      //     },
-      //   },
-      // }),
+      hashedFaviconsPlugin('./src/assets/favicons/logo.svg', {
+        version: '1.0',
+        lang: 'en-US',
+        appName: 'vite-react-ts',
+        appShortName: 'vite-react-ts',
+        appDescription: 'the starting template of the project',
+        developerName: 'Oleksandr Pishta',
+        // biome-ignore lint/style/useNamingConvention: <explanation>
+        developerURL: 'https://livegp.github.io',
+        scope: '/',
+        // biome-ignore lint/style/useNamingConvention: <explanation>
+        start_url: '/?homescreen=1',
+        loadManifestWithCredentials: false,
+        manifestMaskable: true,
+        manifestRelativePaths: true,
+        background: '#fff',
+        // biome-ignore lint/style/useNamingConvention: <explanation>
+        theme_color: '#fff',
+        appleStatusBarStyle: 'black-translucent',
+        cacheBustingQueryParam: null,
+        dir: 'auto',
+        display: 'standalone',
+        orientation: 'any',
+        preferRelatedApplications: false,
+        relatedApplications: undefined,
+        // biome-ignore lint/style/useNamingConvention: <explanation>
+        pixel_art: false,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          favicons: true,
+          windows: true,
+          yandex: true,
+        },
+      }),
+
       ogPlugin({
         basic: {
           url: 'https://livegp.github.io/vite-react-ts/',

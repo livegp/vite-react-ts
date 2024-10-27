@@ -126,7 +126,6 @@ export default defineConfig(({ mode }) => {
           yandex: true,
         },
       }),
-
       ogPlugin({
         basic: {
           url: 'https://livegp.github.io/vite-react-ts/',

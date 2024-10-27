@@ -1,10 +1,9 @@
+// import { faviconsPlugin } from '@darkobits/vite-plugin-favicons';
 import react from '@vitejs/plugin-react-swc';
 import TurboConsole from 'unplugin-turbo-console/vite';
 import { defineConfig, loadEnv } from 'vite';
 import { imagetools } from 'vite-imagetools';
 import biomePlugin from 'vite-plugin-biome';
-import { faviconsPlugin } from 'vite-plugin-favicons';
-import type { Options } from 'vite-plugin-favicons';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import ogPlugin from 'vite-plugin-open-graph';
 import { reactClickToComponent } from 'vite-plugin-react-click-to-component';
@@ -21,7 +20,6 @@ export default defineConfig(({ mode }) => {
       'process.env': env,
     },
     base: env.VITE_BASE_URL || '/',
-    publicDir: '/public',
     cacheDir: './node_modules/.cache/.vite',
     server: {
       port: mode === 'development' ? 3000 : 8080,
@@ -29,7 +27,6 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: 'dist',
-      assetsDir: 'assets',
       cssMinify: 'lightningcss',
       sourcemap: true,
       manifest: true,
@@ -93,42 +90,21 @@ export default defineConfig(({ mode }) => {
         svgo: true,
         emit: false,
       }),
-      faviconsPlugin({
-        imgSrc: './src/assets/favicons/logo.svg',
-        path: '/assets',
-        appName: 'vite-react-ts',
-        appShortName: 'vite-react-ts',
-        appDescription: 'the starting template of the project',
-        developerName: 'Oleksandr Pishta',
-        // biome-ignore lint/style/useNamingConvention: <explanation>
-        developerURL: 'https://livegp.github.io',
-        cacheBustingQueryParam: null,
-        dir: 'auto',
-        lang: 'en-US',
-        background: '#fff',
-        // biome-ignore lint/style/useNamingConvention: <explanation>
-        theme_color: '#fff',
-        appleStatusBarStyle: 'black-translucent',
-        display: 'standalone',
-        orientation: 'any',
-        scope: '/',
-        // biome-ignore lint/style/useNamingConvention: <explanation>
-        start_url: '/?homescreen=1',
-        preferRelatedApplications: false,
-        relatedApplications: undefined,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          favicons: true,
-          windows: true,
-          yandex: false,
-        },
-        version: '1.0',
-        manifestMaskable: true,
-        manifestFileName: 'manifest.json',
-        failGraciously: false,
-      } as Options),
+      // faviconsPlugin({
+      //   inject: true,
+      //   cache: true,
+      //   icons: {
+      //     favicons: {
+      //       source: './src/assets/favicons/logo.svg',
+      //     },
+      //     android: {
+      //       source: './src/assets/favicons/logo.svg',
+      //     },
+      //     appleStartup: {
+      //       source: './src/assets/favicons/logo.svg',
+      //     },
+      //   },
+      // }),
       ogPlugin({
         basic: {
           url: 'https://livegp.github.io/vite-react-ts/',

@@ -1,7 +1,7 @@
 {
   "name": "vite-react-ts",
-  "private": true,
   "version": "0.0.1",
+  "private": true,
   "type": "module",
   "homepage": "https://livegp.github.io/vite-react-ts",
   "description": "",

@@ -95,7 +95,7 @@ export default defineConfig(({ mode }) => {
       }),
       faviconsPlugin({
         imgSrc: './src/assets/favicons/logo.svg',
-        path: '/',
+        path: '/assets',
         appName: 'vite-react-ts',
         appShortName: 'vite-react-ts',
         appDescription: 'the starting template of the project',

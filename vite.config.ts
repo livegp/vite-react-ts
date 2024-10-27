@@ -21,13 +21,31 @@ export default defineConfig(({ mode }) => {
       'process.env': env,
     },
     base: env.VITE_BASE_URL || '/',
+    publicDir: '/public',
+    cacheDir: './node_modules/.cache/.vite',
     server: {
       port: mode === 'development' ? 3000 : 8080,
+      strictPort: false,
     },
     build: {
-      outDir: mode === 'production' ? 'dist' : 'build',
+      outDir: 'dist',
+      assetsDir: 'assets',
+      cssMinify: 'lightningcss',
       sourcemap: true,
+      manifest: true,
     },
+    html: {
+      cspNonce: 'VITE_NONCE',
+    },
+    css: {
+      transformer: 'lightningcss',
+      devSourcemaps: true,
+      // lightningcss: {
+      //   minify: true,
+      //   sourceMap: true,
+      // },
+    },
+    appType: 'spa',
     plugins: [
       react({
         jsxImportSource: '@emotion/react',

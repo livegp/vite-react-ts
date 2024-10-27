@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       'process.env': env,
     },
     base: env.VITE_BASE_URL || '/',
-    cacheDir: './node_modules/.cache/.vite',
+    cacheDir: 'node_modules/.cache/.vite',
     server: {
       port: mode === 'development' ? 3000 : 8080,
       strictPort: false,
@@ -37,10 +37,6 @@ export default defineConfig(({ mode }) => {
     css: {
       transformer: 'lightningcss',
       devSourcemaps: true,
-      // lightningcss: {
-      //   minify: true,
-      //   sourceMap: true,
-      // },
     },
     appType: 'spa',
     plugins: [

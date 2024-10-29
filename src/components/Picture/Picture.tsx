@@ -1,4 +1,4 @@
-import type React from 'react';
+import type { FC } from 'react';
 
 interface PictureType {
   img: {
@@ -11,7 +11,7 @@ interface PictureType {
   };
 }
 
-export const Picture = ({ img, sources }: PictureType): React.JSX.Element => (
+export const Picture: FC<PictureType> = ({ img, sources }) => (
   <picture>
     {Object.entries(sources).map(([format, srcSet]) => (
       <source key={format} srcSet={srcSet} type={`image/${format}`} />

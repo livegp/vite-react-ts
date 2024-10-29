@@ -1,4 +1,4 @@
-import type React from 'react';
+import type { FC } from 'react';
 import { IconStyled } from './Icon.styled.ts';
 
 interface IconPropsType {
@@ -7,11 +7,7 @@ interface IconPropsType {
   primary?: boolean;
 }
 
-export const Icon = ({
-  name,
-  animated,
-  primary,
-}: IconPropsType): React.JSX.Element => (
+export const Icon: FC<IconPropsType> = ({ name, animated, primary }) => (
   <IconStyled
     animated={animated}
     primary={primary}

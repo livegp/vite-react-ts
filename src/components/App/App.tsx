@@ -1,6 +1,5 @@
 import { Global } from '@emotion/react';
-import type React from 'react';
-import { useState } from 'react';
+import { type FC, useState } from 'react';
 import {
   img,
   sources,
@@ -17,7 +16,7 @@ import {
   TitleStyled,
 } from './App.styled.ts';
 
-export function App(): React.JSX.Element {
+export const App: FC = () => {
   const [count, setCount] = useState(0);
 
   const handleClick = (): void => {
@@ -49,4 +48,4 @@ export function App(): React.JSX.Element {
       <Picture img={img} sources={sources} />
     </>
   );
-}
+};

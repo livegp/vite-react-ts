@@ -16,6 +16,13 @@ export const Picture: FC<PictureType> = ({ img, sources }) => (
     {Object.entries(sources).map(([format, srcSet]) => (
       <source key={format} srcSet={srcSet} type={`image/${format}`} />
     ))}
-    <img src={img.src} alt='Example' width={img.w} height={img.h} />
+    <img
+      src={img.src}
+      alt='Example'
+      width={img.w}
+      height={img.h}
+      loading='eager'
+      title='Example Image'
+    />
   </picture>
 );

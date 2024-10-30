@@ -7,6 +7,7 @@ import hashedFaviconsPlugin from 'vite-plugin-hashed-favicons';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import ogPlugin from 'vite-plugin-open-graph';
 import { reactClickToComponent } from 'vite-plugin-react-click-to-component';
+import Sitemap from 'vite-plugin-sitemap';
 import { svgSpritemap } from 'vite-plugin-svg-spritemap';
 import { webfontDownload } from 'vite-plugin-webfont-dl';
 
@@ -47,6 +48,7 @@ export default defineConfig(({ mode }) => {
       ViteMinifyPlugin({}),
       TurboConsole({}),
       reactClickToComponent(),
+      Sitemap(),
       biomePlugin({
         mode: 'check',
         files: '.',
@@ -86,7 +88,7 @@ export default defineConfig(({ mode }) => {
         svgo: true,
         emit: false,
       }),
-      hashedFaviconsPlugin('./src/assets/favicons/logo.svg', {
+      hashedFaviconsPlugin('./src/assets/icons/react.svg', {
         version: '1.0',
         lang: 'en-US',
         appName: 'vite-react-ts',
@@ -127,7 +129,7 @@ export default defineConfig(({ mode }) => {
           url: 'https://livegp.github.io/vite-react-ts/',
           siteName: 'vite-react-ts',
           title: 'vite-react-ts',
-          description: 'Oleksandr Pishta, Full Stack Developer',
+          description: 'the starting template of the project',
           type: 'image.png',
           determiner: 'auto',
           locale: 'en_US',
@@ -145,7 +147,7 @@ export default defineConfig(({ mode }) => {
           siteId: '118488504',
           creator: '@live_gp',
           creatorId: '118488504',
-          description: 'Oleksandr Pishta, Full Stack Developer',
+          description: 'the starting template of the project',
           title: 'vite-react-ts',
           image: 'https://livegp.github.io/vite-react-ts/vite.png',
           imageAlt: 'Vite Image',

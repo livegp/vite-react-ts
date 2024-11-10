@@ -1,9 +1,14 @@
 import { StrictMode } from 'react';
-import { ViteReactSSG } from 'vite-react-ssg/single-page';
+import { createRoot } from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import { App } from './components/App/App.tsx';
 
-export const createRoot = ViteReactSSG(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+const rootElement = document.getElementById('root');
+rootElement &&
+  createRoot(rootElement).render(
+    <StrictMode>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </StrictMode>,
+  );

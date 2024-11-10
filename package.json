@@ -22,7 +22,6 @@
     "dev": "bunx --bun vite",
     "build": "bunx --bun tsc -b && vite build",
     "preview": "bunx --bun vite preview",
-    "generator": "bunx --bun vite-react-ssg build",
     "format": "biome format --write --unsafe",
     "lint": "biome lint --write --unsafe",
     "check": "biome check --write --unsafe"
@@ -42,6 +41,7 @@
     "@vitejs/plugin-react-swc": "^3.7.1",
     "lefthook": "^1.8.2",
     "lightningcss": "^1.28.1",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.28.0",
     "typescript": "^5.6.3",
     "unplugin-turbo-console": "^1.10.4",
@@ -54,7 +54,6 @@
     "vite-plugin-react-click-to-component": "^3.0.0",
     "vite-plugin-sitemap": "^0.7.1",
     "vite-plugin-svg-spritemap": "^1.0.1",
-    "vite-plugin-webfont-dl": "^3.9.5",
-    "vite-react-ssg": "^0.8.0"
+    "vite-plugin-webfont-dl": "^3.9.5"
   }
 }

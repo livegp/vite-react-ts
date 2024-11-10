@@ -102,7 +102,7 @@ export default defineConfig(({ mode }) => {
         start_url: '/?homescreen=1',
         loadManifestWithCredentials: false,
         manifestMaskable: true,
-        manifestRelativePaths: true,
+        manifestRelativePaths: false,
         background: '#fff',
         // biome-ignore lint/style/useNamingConvention: <explanation>
         theme_color: '#fff',

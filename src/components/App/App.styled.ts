@@ -1,36 +1,9 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const LinkStyled = styled.a`
-
-`;
-
 export const TitleStyled = styled.h1`
   font-size: 3.2em;
   line-height: 1.1;
-`;
-
-export const ButtonStyled = styled.button`
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  &:hover {
-    border-color: #646cff;
-  }
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background-color: #f9f9f9;
-}
 `;
 
 export const CardStyled = styled.div`

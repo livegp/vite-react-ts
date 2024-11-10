@@ -1,26 +1,33 @@
 import type { FC } from 'react';
 
 interface PictureType {
-  img: {
-    src: string;
-    w: number;
-    h: number;
-  };
-  sources: {
-    [key: string]: string;
+  picture: {
+    img: {
+      src: string;
+      w: number;
+      h: number;
+    };
+    sources: {
+      [key: string]: string;
+    };
   };
 }
 
-export const Picture: FC<PictureType> = ({ img, sources }) => (
+export const Picture: FC<PictureType> = ({
+  picture: {
+    img: { src, w, h },
+    sources,
+  },
+}) => (
   <picture>
     {Object.entries(sources).map(([format, srcSet]) => (
       <source key={format} srcSet={srcSet} type={`image/${format}`} />
     ))}
     <img
-      src={img.src}
+      src={src}
       alt='Example'
-      width={img.w}
-      height={img.h}
+      width={w}
+      height={h}
       loading='eager'
       title='Example Image'
     />

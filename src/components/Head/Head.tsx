@@ -1,5 +1,6 @@
 import type { FC } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Head as Helmet } from 'vite-react-ssg';
+// import { Helmet } from 'react-helmet-async';
 
 export const Head: FC = () => (
   <Helmet>

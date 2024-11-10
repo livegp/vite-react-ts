@@ -126,20 +126,23 @@ export default defineConfig(({ mode }) => {
       }),
       ogPlugin({
         basic: {
-          url: 'https://livegp.github.io/vite-react-ts/',
-          siteName: 'vite-react-ts',
           title: 'vite-react-ts',
-          description: 'the starting template of the project',
           type: 'image.png',
-          determiner: 'auto',
-          locale: 'en_US',
           image: {
             url: 'https://livegp.github.io/vite-react-ts/vite.png',
+            // secureUrl: undefined,
             type: 'image/png',
             width: 900,
             height: 440,
             alt: 'Vite Image',
           },
+          url: 'https://livegp.github.io/vite-react-ts/',
+          description: 'the starting template of the project',
+          determiner: 'auto',
+          locale: 'en_US',
+          localeAlternate: ['en_US', 'ru_RU'],
+          siteName: 'vite-react-ts',
+          // video: undefined,
         },
         twitter: {
           card: 'summary_large_image',
@@ -151,6 +154,27 @@ export default defineConfig(({ mode }) => {
           title: 'vite-react-ts',
           image: 'https://livegp.github.io/vite-react-ts/vite.png',
           imageAlt: 'Vite Image',
+          // player: undefined,
+          // playerWidth: undefined,
+          // playerHeight: undefined,
+          // playerStream: undefined,
+          // app: {
+          //   name: {
+          //     iphone: undefined,
+          //     ipad: undefined,
+          //     googleplay: undefined,
+          //   },
+          //   id: {
+          //     iphone: undefined,
+          //     ipad: undefined,
+          //     googleplay: undefined,
+          //   },
+          //   url: {
+          //     iphone: undefined,
+          //     ipad: undefined,
+          //     googleplay: undefined,
+          //   },
+          // },
         },
         facebook: {
           appId: 100000506117116,

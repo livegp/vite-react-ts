@@ -31,15 +31,15 @@ export const App: FC = () => {
         <Link href='https://react.dev'>
           <Icon name='react' animated={true} />
         </Link>
+        <Link href='https://typescriptlang.org/'>
+          <Icon name='ts' />
+        </Link>
       </div>
-      <TitleStyled>Vite + React + Bun</TitleStyled>
+      <TitleStyled>Vite + React + TS</TitleStyled>
       <CardStyled>
         <Button label={`count is ${count}`} onClick={handleClick} />
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </CardStyled>
-      <TextStyled>Click on the Vite and React logos to learn more</TextStyled>
+      <TextStyled>Click on logos to learn more</TextStyled>
       <Picture picture={picture} />
     </>
   );

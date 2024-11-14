@@ -45,8 +45,8 @@ export default defineConfig(({ mode }) => {
         plugins: [['@swc/plugin-emotion', {}]],
       }),
       ViteMinifyPlugin({}),
-      reactClickToComponent(),
       Sitemap(),
+      reactClickToComponent(),
       biomePlugin({
         mode: 'check',
         files: '.',
@@ -86,7 +86,7 @@ export default defineConfig(({ mode }) => {
         svgo: true,
         emit: false,
       }),
-      hashedFaviconsPlugin('./src/assets/icons/react.svg', {
+      hashedFaviconsPlugin('src/assets/icons/vite.svg', {
         version: '1.0',
         lang: 'en-US',
         appName: 'vite-react-ts',

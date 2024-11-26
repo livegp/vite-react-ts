@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
+  # Using a different branch name? Replace `main` with your branch's name
   push:
     branches: ["main"]
   # Allows you to run this workflow manually from the Actions tab
@@ -22,33 +22,48 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Single deploy job since we're just deploying
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository code
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Caching Bun dependencies to speed up subsequent builds
+      - name: Cache Bun dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+
+      # Set up the Bun runtime environment
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: bun install
+      # Install dependencies and build the project
+      - name: Install & Build
+        run: |
+          bun install
+          bun run build
 
-      - name: Build
-        run: bun run build
+      # Configure GitHub Pages settings for the repository
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
+      # Deploy the static site to the GitHub Pages branch
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          # The branch where GitHub Pages will serve the site from
           branch: gh-pages
+          # The folder containing the built static files
           folder: dist
-          # Remove previous build files
+          # Remove previous build files to ensure a clean deployment
           clean: true
           # Do not remove the `.nojekyll` file: we have manually added an empty `.nojekyll` file at the root of the `gh-pages` branch and we don't want having to re-create it after each build.
           clean-exclude: |
             .nojekyll
-
-# permissions:
-#   contents: write

@@ -11,7 +11,9 @@
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^4.1.2",
+    "react-router": "^7.0.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
@@ -24,7 +26,6 @@
     "lefthook": "^1.8.4",
     "lightningcss": "^1.28.2",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.0.1",
     "typescript": "^5.7.2",
     "vite": "^6.0.1",
     "vite-imagetools": "^7.0.5",

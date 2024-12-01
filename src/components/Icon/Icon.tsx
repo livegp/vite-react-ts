@@ -7,7 +7,11 @@ interface IconPropsType {
   primary?: boolean;
 }
 
-export const Icon: FC<IconPropsType> = ({ name, animated, primary }) => (
+export const Icon: FC<IconPropsType> = ({
+  name,
+  animated = false,
+  primary = false,
+}) => (
   <IconStyled
     animated={animated}
     primary={primary}

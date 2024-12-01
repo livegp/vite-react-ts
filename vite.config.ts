@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react-swc';
-import { defineConfig, loadEnv } from 'vite';
+import { type PluginOption, defineConfig, loadEnv } from 'vite';
 import { imagetools } from 'vite-imagetools';
 import biomePlugin from 'vite-plugin-biome';
 import hashedFaviconsPlugin from 'vite-plugin-hashed-favicons';
@@ -110,7 +110,7 @@ export default defineConfig(({ mode }) => {
         display: 'standalone',
         orientation: 'any',
         preferRelatedApplications: false,
-        relatedApplications: undefined,
+        relatedApplications: [],
         // biome-ignore lint/style/useNamingConvention: <explanation>
         pixel_art: false,
         icons: {
@@ -178,6 +178,6 @@ export default defineConfig(({ mode }) => {
           appId: 100000506117116,
         },
       }),
-    ],
+    ] as PluginOption[],
   };
 });

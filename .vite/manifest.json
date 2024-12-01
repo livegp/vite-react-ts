@@ -64,10 +64,22 @@
     "src": "_vite-rnr-Fxhl.jpg"
   },
   "index.html": {
-    "file": "assets/index-CQkZkqY3.js",
+    "file": "assets/index-CIdRevfS.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
+    "dynamicImports": [
+      "src/pages/index.tsx"
+    ]
+  },
+  "src/pages/index.tsx": {
+    "file": "assets/index-n2UXaR33.js",
+    "name": "index",
+    "src": "src/pages/index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
     "assets": [
       "assets/vite-BmXhp8or.avif",
       "assets/vite-B3Dp-wDg.avif",

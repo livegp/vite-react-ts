@@ -21,6 +21,9 @@ export default defineConfig(({ mode }) => {
     },
     base: env.VITE_BASE_URL || '/',
     cacheDir: 'node_modules/.cache/.vite',
+    resolve: {
+      extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
+    },
     server: {
       port: mode === 'development' ? 3000 : 8080,
       strictPort: false,

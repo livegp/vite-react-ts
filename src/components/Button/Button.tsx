@@ -1,13 +1,13 @@
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import { ButtonStyled } from './Button.styled';
 
 interface ButtonProps {
   onClick: () => void;
-  label: string;
+  children: ReactNode;
 }
 
-export const Button: FC<ButtonProps> = ({ onClick, label }) => (
+export const Button: FC<ButtonProps> = ({ onClick, children }) => (
   <ButtonStyled type='button' onClick={onClick}>
-    {label}
+    {children}
   </ButtonStyled>
 );

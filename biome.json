@@ -75,7 +75,7 @@
   },
   "overrides": [
     {
-      "include": ["./vite.config.js"],
+      "include": ["./vite.config.js", "src/pages/**/*.tsx"],
       "linter": {
         "rules": {
           "style": {

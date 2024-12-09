@@ -15,7 +15,6 @@ const ErrorNotFound = lazy(
 const ErrorTest = lazy(() => import('../../pages/ErrorTest/ErrorTest.tsx'));
 
 export const App = (): JSX.Element => {
-export const App = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Global styles={GlobalStyles} />

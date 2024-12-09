@@ -15,6 +15,7 @@ export const GlobalStyles = css`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+
   @media (prefers-color-scheme: light) {
     color: #213547;
     background-color: #ffffff;

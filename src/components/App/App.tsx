@@ -12,6 +12,8 @@ const Home = lazy(() => import('../../pages/Home/Home.tsx'));
 const ErrorNotFound = lazy(
   () => import('../../pages/ErrorNotFound/ErrorNotFound.tsx'),
 );
+
+//@ts-ignore
 const ErrorTest = lazy(() => import('../../pages/ErrorTest/ErrorTest.tsx'));
 
 export const App = (): JSX.Element => {

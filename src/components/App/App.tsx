@@ -18,7 +18,7 @@ const ErrorTest = lazy(() => import('../../pages/ErrorTest/ErrorTest.tsx'));
 
 export const App = (): JSX.Element => {
   return (
-    <BrowserRouter basename='/vite-react-ts/'>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Global styles={GlobalStyles} />
       <Head />
       <Suspense fallback={<div>Loading...</div>}>

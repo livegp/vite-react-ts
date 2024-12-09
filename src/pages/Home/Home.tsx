@@ -15,18 +15,16 @@ const Home = (): JSX.Element => {
   };
 
   return (
-    <>
-      <div>
-        <Link href='https://vitejs.dev'>
-          <Icon name='vite' primary={true} />
-        </Link>
-        <Link href='https://react.dev'>
-          <Icon name='react' animated={true} />
-        </Link>
-        <Link href='https://typescriptlang.org/'>
-          <Icon name='ts' />
-        </Link>
-      </div>
+    <div>
+      <Link href='https://vitejs.dev'>
+        <Icon name='vite' primary={true} />
+      </Link>
+      <Link href='https://react.dev'>
+        <Icon name='react' animated={true} />
+      </Link>
+      <Link href='https://typescriptlang.org/'>
+        <Icon name='ts' />
+      </Link>
 
       <CardStyled>
         <TitleStyled>Vite + React</TitleStyled>
@@ -36,7 +34,7 @@ const Home = (): JSX.Element => {
         </TextStyled>
       </CardStyled>
       <Picture picture={picture} />
-    </>
+    </div>
   );
 };
 

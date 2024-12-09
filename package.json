@@ -8,26 +8,28 @@
     "check": "biome check --write --unsafe"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "normalize.css": "^8.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-error-boundary": "^4.1.2",
-    "react-router": "^7.0.1"
+    "react-router": "^7.0.2",
+    "the-new-css-reset": "^1.11.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@swc/plugin-emotion": "^7.0.1",
+    "@swc/plugin-emotion": "^7.0.3",
     "@types/bun": "^1.1.14",
     "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react-swc": "^3.7.2",
-    "lefthook": "^1.8.5",
+    "lefthook": "^1.9.0",
     "lightningcss": "^1.28.2",
     "react-helmet-async": "^2.0.5",
     "typescript": "^5.7.2",
-    "vite": "^6.0.2",
+    "vite": "^6.0.3",
     "vite-imagetools": "^7.0.5",
     "vite-plugin-biome": "^1.0.12",
     "vite-plugin-hashed-favicons": "^1.1.0",
@@ -36,7 +38,7 @@
     "vite-plugin-react-click-to-component": "^3.0.1",
     "vite-plugin-sitemap": "^0.7.1",
     "vite-plugin-svg-spritemap": "^1.0.1",
-    "vite-plugin-webfont-dl": "^3.10.2"
+    "vite-plugin-webfont-dl": "^3.10.3"
   },
   "name": "vite-react-ts",
   "version": "0.0.1",

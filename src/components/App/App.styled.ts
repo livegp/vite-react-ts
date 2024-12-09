@@ -1,4 +1,6 @@
 import { css } from '@emotion/react';
+// import 'the-new-css-reset/css/reset.css';
+// import 'normalize.css';
 
 export const GlobalStyles = css`
 :root {

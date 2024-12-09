@@ -33,6 +33,12 @@ export default defineConfig(({ mode }) => {
       cssMinify: 'lightningcss',
       sourcemap: true,
       manifest: true,
+      rollupOptions: {
+        input: {
+          main: 'index.html',
+          // '404': '404.html',
+        },
+      },
     },
     html: {
       cspNonce: 'VITE_NONCE',

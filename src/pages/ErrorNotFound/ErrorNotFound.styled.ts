@@ -1,37 +1,25 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router';
 
-export const ErrorContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #f3f4f6;
-`;
-
-export const ErrorTitle = styled.h1`
-  font-size: 4rem;
-  font-weight: bold;
-  color: #1f2937;
-  margin-bottom: 1rem;
-`;
-
-export const ErrorText = styled.p`
-  font-size: 1.25rem;
-  color: #4b5563;
-  margin-bottom: 2rem;
-`;
-
 export const StyledLink = styled(Link)`
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   background-color: #3b82f6;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   text-decoration: none;
-  transition: background-color 0.2s;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.6s ease-out 0.6s both;
 
   &:hover {
     background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 `;
